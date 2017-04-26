@@ -18,7 +18,8 @@ composer require --prefer-dist johnnylei/yii2-redis-queue
 //　前台发送
 Yii::$app->redis_queue->publish('test', 'xxxxxxxxxxxxxxx');
 
-// console里面监听，并且处理
+// console里面监听，并且处理，设置监听不超时
+ini_set('default_socket_timeout', -1);
 Yii::$app->redis_queue->subscribe('test', function($instance, $channelName, $message) {
     var_dump($message);
 });
