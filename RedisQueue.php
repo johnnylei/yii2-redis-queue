@@ -1,5 +1,5 @@
 <?php
-namespace johnnylei\redis_queue;
+namespace johnnylei;
 use yii\base\Component;
 use yii\base\Exception;
 
